@@ -1,6 +1,6 @@
 /* @flow */
 
-import React from 'react';
+import * as React from 'react';
 import type {Ref as ReactRef, Node as ReactNode} from 'react';
 import PropTypes from 'prop-types';
 
@@ -141,6 +141,7 @@ export default class MenuItem extends React.Component<Props, State> {
       notifyEvent: (event: MenuEvent) => {
         switch (event.type) {
         case 'chosen':
+        // TODO ReactDOM.unstable_batchedUpdates
           /*:: if (!(event instanceof ChosenEvent)) throw new Error(); */
           if (this.props.onItemChosen) this.props.onItemChosen(event);
           break;
