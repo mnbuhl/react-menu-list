@@ -1,6 +1,7 @@
 /* @flow */
 
-import React from 'react';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import type {Ref as ReactRef, Node as ReactNode, ComponentType as ReactComponentType} from 'react';
 import PropTypes from 'prop-types';
 import FloatAnchor from 'react-float-anchor';
@@ -97,7 +98,9 @@ export default class MenuButton extends React.Component<Props, State> {
     ])
       .takeUntilBy(this._onClose)
       .onValue(() => {
-        this.close();
+        ReactDOM.unstable_batchedUpdates(() => {
+          this.close();
+        });
       });
 
     return new Promise(resolve => {
