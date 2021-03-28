@@ -1,3 +1,7 @@
+## 6.1.1 (2021-03-27)
+
+* Batch React updates during all event handling.
+
 ## 6.1.0 (2019-10-15)
 
 * Added `menuParentElement` prop. ([#14](https://github.com/StreakYC/react-menu-list/pull/14))
