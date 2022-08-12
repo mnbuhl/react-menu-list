@@ -81,6 +81,8 @@ export default class MenuButton extends React.Component<Props, State> {
       Kefir.merge([
         fromEventsCapture(window, 'mousedown'),
         fromEventsCapture(window, 'focus')
+          // Ignore window focus events that happen when the page regains focus
+          .filter(e => e.target !== window),
       ])
         .filter(e => {
           const el = this._anchorEl;
