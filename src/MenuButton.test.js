@@ -145,7 +145,7 @@ test('passes buttonProps to custom component', () => {
   /* eslint-ignore-next-line react/prop-types */
   const CustomButton: Function = ({domNode, customProp}) => {
     return (
-      <button html-custom={customProp} ref={domNode}>
+      <button data-custom={customProp} ref={domNode}>
         btn
       </button>
     );
@@ -181,7 +181,7 @@ test('passes buttonProps to custom component', () => {
     0
   );
 
-  expect(button.getAttribute('custom')).toBeDefined();
+  expect(button.getAttribute('data-custom')).toBeDefined();
 
   ReactDOM.unmountComponentAtNode(mountPoint);
 });
