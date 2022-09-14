@@ -4,3 +4,11 @@
 npm-debug.log
 /js
 /example/bundle.js
+
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
