@@ -1,3 +1,7 @@
+## 6.2.0 (2022-11-09)
+
+- Added `noMouseHighlight` prop to MenuItem to allow keyboard highlighting to be tracked separately from mouse hover.
+
 ## 6.1.3 (2022-08-11)
 
 - Fixed issue where MenuButton closes its dropdown if the page loses and regains focus.
