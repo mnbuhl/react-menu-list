@@ -50,6 +50,7 @@ export type MenuItemProps = {
   style?: Object;
   highlightedClassName?: string;
   highlightedStyle?: Object;
+  noMouseHighlight?: boolean;
 
   index?: number;
   onMouseLeave?: (event: MouseEvent) => void;
